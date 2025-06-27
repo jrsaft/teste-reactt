@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Júlia Saft</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1 class="text-3xl font-bold underline bg-amber-600">Hello world!</h1>
+      <a href="https://tailwindcss.com/docs/installation/using-vite"><button className="uppercase bg-green-600 md:bg-red-400 rounded-sm p-2">Me clique-me</button></a>
+      <form action="https://getform.io/f/bkknxwqb" method="POST">
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="message" />
+        {/* add hidden Honeypot input to prevent spams */}
+        <input type="hidden" name="_gotcha" style={{ display: "none !important" }} />
+        {/* checkbox handle */}
+        <input
+          type="checkbox"
+          name="subscribe"
+          defaultValue="yes"
+          defaultChecked=""
+        />
+        <input type="hidden" name="subscribe" defaultValue="no" />
+        {/* radio button handle */}
+        <input type="radio" name="gender" defaultValue="male" defaultChecked="" />
+        <input type="radio" name="gender" defaultValue="female" />
+        <input type="radio" name="gender" defaultValue="other" />
+        {/* select field handle */}
+        <select name="work-experience">
+          <option value="one-year">0-1 years</option>
+          <option value="one-five-years">1-5 years</option>
+        </select>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  );
 }
 
-export default App
+export default App;
